@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "godot-code-gates"
+version = "0.1.0"
+description = "Static code gates for Godot 4 projects: a call/signal map and a CI gate that wants a written verdict for every per-frame loop."
+readme = "README.md"
+license = { file = "LICENSE" }
+authors = [{ name = "MarcelineVPQ" }]
+requires-python = ">=3.11"
+dependencies = []
+keywords = ["godot", "gdscript", "ci", "performance", "static-analysis"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Environment :: Console",
+    "Topic :: Software Development :: Quality Assurance",
+    "Topic :: Games/Entertainment",
+]
+
+[project.urls]
+Homepage = "https://github.com/MarcelineVPQ/godot-code-gates"
+
+[project.scripts]
+godot-callmap = "godot_code_gates.callmap:main"
+godot-hot-loops = "godot_code_gates.list_hot_loops:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]

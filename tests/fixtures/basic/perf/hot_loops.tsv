@@ -1,0 +1,5 @@
+key	verdict	reason
+game/hud.gd::_on_moved::for label in get_children():	FIX	runs per frame over every HUD label; cache the labels in _ready
+game/player.gd::_update_trail::for p in trail:	MEASURE	trail length grows with play time; not measured yet
+game/rules/combat.gd::resolve::for u in units:	OK	at most 8 units, once per attack
+game/rules/combat.gd::resolve::for u in units:#2	OK	at most 8 units, once per attack

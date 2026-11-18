@@ -1,0 +1,5 @@
+; Minimal Godot 4 project for godot-code-gates tests.
+config_version=5
+
+[application]
+config/name="Fixture"

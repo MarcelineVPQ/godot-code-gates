@@ -1,0 +1,8 @@
+[hot-loops]
+always-hot = ["game/rules/"]
+exclude = ["addons/", "tests/"]
+verdicts = "perf/hot_loops.tsv"
+extra-flags = { sqrt = '\bsqrt\(' }
+
+[callmap]
+exclude = ["addons/"]
